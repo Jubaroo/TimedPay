@@ -87,14 +87,9 @@ public class TimedPay implements WurmServerMod, Initable, PreInitable, Configura
             if (this.amountCash > 0) {
                 sb.append("Giving cash ");
                 player.addMoney((long)this.amountCash);
-                if (playerMessage) { player.getCommunicator().sendServerMessage("You have been given " + amountCash + " coin just for being on the server!",messageRed,messageGreen,messageBlue); }
+                if (playerMessage) { player.getCommunicator().sendServerMessage("You have just received " + amountCash + " iron coins just for being on this server!",messageRed,messageGreen,messageBlue); }
             }
 
-            if (this.amountCash > 0) {
-                sb.append("Giving cash ");
-                player.addMoney((long)this.amountCash);
-                if (playerMessage) { player.getCommunicator().sendServerMessage("You have been given " + amountCash + " coin just for being on the server!",messageRed,messageGreen,messageBlue); }
-            }
             if (this.amountKarma > 0) {
                 if (sb.length() > 0) {
                     sb.append("and karma ");
@@ -103,7 +98,7 @@ public class TimedPay implements WurmServerMod, Initable, PreInitable, Configura
                 }
 
                 player.setKarma(player.getKarma() + this.amountKarma);
-                if (playerMessage) { player.getCommunicator().sendServerMessage("You have been given " + amountKarma + " karma just for being on the server!",messageRed,messageGreen,messageBlue); }
+                if (playerMessage) { player.getCommunicator().sendServerMessage("You have just received " + amountKarma + " karma points just for being on this server!",messageRed,messageGreen,messageBlue); }
             }
 
             sb.append("to player " + player.getName());
